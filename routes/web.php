@@ -4,8 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('admin');
+})->middleware(["auth", "verified"])->name("home");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -18,19 +18,22 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(["auth", "verified"])
-->name("admin.")
-->prefix("admin")
-->group(function () {
+    ->name("admin.")
+    ->prefix("admin")
+    ->group(function () {
 
-Route::get("/", function() {
+        Route::get("/", function () {
 
-    return view("admin");
-})->name("index");
+            return view("admin");
+        })->name("index");
 
-Route::get("profile", function() {
-    return view("profile");
-})->name("profile");
-    
-});
+        Route::get("profile", function () {
+            return view("profile");
+        })->name("profile");
 
-require __DIR__.'/auth.php';
+        Route::get("projects", function () {
+            return view("projects");
+        })->name("projects");
+    });
+
+require __DIR__ . '/auth.php';

@@ -7,7 +7,15 @@
         <div class="content flex-grow-1 p-4">
             <div class="header d-flex justify-content-between align-items-center mb-4">
                 <h1>Il tuo Profilo</h1>
-                <button class="btn btn-danger">Esci</button>
+                <button class="btn btn-dark">
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form></button>
             </div>
 
             <div class="row">
@@ -17,7 +25,7 @@
                             <img src="https://via.placeholder.com/150" alt="Foto Profilo" class="rounded-circle mb-3" width="150">
                             <h5 class="card-title">Nome Utente</h5>
                             <p class="card-text">Professione: Sviluppatore Web</p>
-                            <button class="btn btn-primary">Modifica Profilo</button>
+                            <button class="btn btn-dark">Modifica Profilo</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +51,7 @@
                                     <label for="bio" class="form-label">Bio</label>
                                     <textarea class="form-control" id="bio" rows="4" disabled>Appassionato di tecnologia, sviluppo web e design. Sempre alla ricerca di nuove sfide.</textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Salva Modifiche</button>
+                                <button type="submit" class="btn btn-dark">Salva Modifiche</button>
                             </form>
                         </div>
                     </div>

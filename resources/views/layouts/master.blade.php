@@ -13,11 +13,14 @@
 <body>
 
       
-     
-
    @include("partials.sidebar")
 
+   <div class="content-right">
+
      @yield("content")
+   </div>
+
+    
 
      
     
