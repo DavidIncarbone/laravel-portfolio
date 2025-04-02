@@ -9,7 +9,7 @@
                     <a href="{{route("admin.profile")}}" class="nav-link text-white">Profilo</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route("admin.projects")}}" class="nav-link text-white">Progetti</a>
+                    <a href="{{route("projects.index")}}" class="nav-link text-white">Progetti</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link text-white">Contatti</a>

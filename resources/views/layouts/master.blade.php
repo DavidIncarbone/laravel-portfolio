@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title></title>
+    <title>Portfolio</title>
 
     @vite("resources/sass/app.scss","resources/js/app.js")
 
 </head>
 <body>
 
-      
+      <div class="wrapper">
    @include("partials.sidebar")
 
-   <div class="content-right">
-
+   
+     <div class="content container-fluid px-3">
      @yield("content")
+     </div>
    </div>
 
     
