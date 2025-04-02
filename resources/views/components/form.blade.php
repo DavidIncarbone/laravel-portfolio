@@ -5,7 +5,7 @@
 <form action="{{$route}}" method="POST">
 
     @csrf
-    @method("{{$method}}")
+    {{$method}}
 
     <div class="form-control mb-3 d-flex flex-column">
         <label for="name">Nome del progetto</label>
