@@ -15,6 +15,7 @@ class ProjectsSeeder extends Seeder
     {
         $boolBNB = new Project;
 
+        $boolBNB->type_id = 3;
         $boolBNB->name = "Bool B&B";
         $boolBNB->customer = "Boolean";
         $boolBNB->period = "Febbraio 2024";
@@ -35,6 +36,7 @@ class ProjectsSeeder extends Seeder
 
         $boolflix = new Project;
 
+        $boolflix->type_id = 1;
         $boolflix->name = "Boolflix";
         $boolflix->customer = "Boolean";
         $boolflix->period = "Gennaio 2024";

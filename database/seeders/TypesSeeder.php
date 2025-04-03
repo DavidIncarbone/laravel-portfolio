@@ -14,19 +14,15 @@ class TypesSeeder extends Seeder
      */
     public function run(): void
     {
-        $frontEnd = new Type;
 
-        $frontEnd->name = "FrontEnd";
-        $frontEnd->save();
+        $types = ["frontEnd", "BackEnd", "FullStack"];
 
-        $backEnd = new Type;
+        foreach ($types as $type) {
 
-        $backEnd->name = "BackEnd";
-        $backEnd->save();
+            $newType = new Type;
 
-        $fullStack = new Type;
-
-        $fullStack->name = "FullStack";
-        $fullStack->save();
+            $newType->name = $type;
+            $newType->save();
+        }
     }
 }
