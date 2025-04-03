@@ -9,7 +9,7 @@
             </header>
 
             <div class="d-flex gap-3 py-4">
-    <a class="btn btn-outline-primary" href="{{ route("projects.create") }}">Aggiungi un nuovo progetto</a>
+    <a class="btn btn-primary" href="{{ route("projects.create") }}">Aggiungi un nuovo progetto</a>
          
              </div>
 
@@ -17,12 +17,13 @@
             <section id="projects" class="my-5">
                 <table class="table table-bordered table-striped">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th>Nome Progetto</th>
+                            <th>Tipo</th>
                             <th>Nome Cliente</th>
                             <th>Periodo di Realizzazione</th>
                             <th>Descrizione</th>
-                            <th>Dettagli</th>
+                            <th>Opzioni</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,15 +31,23 @@
                         @foreach($projects as $project)
                         <tr>
                             <td>{{$project->name}}</td>
+                            <td>{{$project->type}}</td>
                             <td>{{$project->customer}}</td>
                             <td>{{$project->period}}</td>
                             @php
-    $maxWords = 10; // Numero massimo di parole
-    $words = explode(' ', $project->summary); // Suddividi il testo in parole
-    $shortenedDescription = implode(' ', array_slice($words, 0, $maxWords)); // Prendi solo le prime $maxWords parole
-@endphp
+                                 $maxWords = 10; 
+                                $words = explode(' ', $project->summary);
+                                 $shortenedDescription = implode(' ', array_slice($words, 0, $maxWords)); 
+                            @endphp
                             <td>{{$shortenedDescription}}...</td>
-                            <td><a id="project-details-btn" href="{{route("projects.show", $project)}}" class="btn btn-dark">Dettagli</a></td>
+                            <td class="d-flex gap-3">
+                                <a id="project-details-btn" href="{{route("projects.show", $project)}}" class="btn btn-info">Dettagli</a>
+                                <a class="btn btn-warning" href="{{ route("projects.edit", $project) }}">Modifica</a>
+                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                      Elimina
+                                    </button>  
+                                
+                            </td>
                         </tr>
 
                         @endforeach
@@ -46,6 +55,8 @@
                     </tbody>
                 </table>
             </section>
+
+            @include("partials.modal")
         
 
 @endsection

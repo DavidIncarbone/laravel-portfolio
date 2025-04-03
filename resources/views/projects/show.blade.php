@@ -18,7 +18,16 @@
                     
                     <!-- Project Information -->
                     <div class="col-md-6">
+                        <div class="d-flex justify-content-between">
                         <h2>{{$project->name}}</h2>
+                          <div> 
+                            <a class="btn btn-warning" href="{{ route("projects.edit", $project) }}">Modifica</a>  
+                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                 Elimina
+                               </button>
+                        </div>
+                        </div>
+                        <p><strong>Tipo:</strong> {{$project->type}}</p>
                         <p><strong>Cliente:</strong> {{$project->customer}}</p>
                         <p><strong>Periodo di Realizzazione:</strong> {{$project->period}}</p>
                         <p><strong>Descrizione:</strong>{{$project->summary}} </p>
@@ -28,9 +37,11 @@
                 <!-- Action Buttons -->
                 <div class="mt-4">
                     <a href="{{$project->link}}" class="btn btn-success" target="_blank">Visita il Sito del Progetto</a>
-                    <a href="{{route("projects.index")}}" class="btn btn-secondary ml-3">Torna ai Progetti</a>
+                    
                 </div>
             </section>
         </div>
+
+        @include("partials.modal")
 
 @endsection

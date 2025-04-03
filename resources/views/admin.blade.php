@@ -1,4 +1,11 @@
 
+@php
+    use App\Models\Project;
+
+    $projectCount = Project::all()->count();
+    
+@endphp
+
 
 @extends('layouts.master')
 
@@ -27,7 +34,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Progetti completati</h5>
-                            <p class="card-text"></p>
+                            <p class="card-text"><strong>{{$projectCount}}</strong></p>
                         </div>
                     </div>
                 </div>

@@ -12,6 +12,10 @@
         <input type="text" name="name" id="name" value="{{$name}}">
     </div>
     <div class="form-control mb-3 d-flex flex-column">
+        <label for="type">Tipo di progetto</label>
+        <input type="text" name="type" id="type" value="{{$type}}">
+    </div>
+    <div class="form-control mb-3 d-flex flex-column">
         <label for="customer">Cliente</label>
         <input type="text" name="customer" id="customer" value="{{$customer}}">
     </div>
@@ -29,6 +33,6 @@
         <input type="text" name="link" id="link" value="{{$link}}">
     </div>
 
-     <input type="submit" value="Salva">
+     <input type="submit" value="Salva" class="btn btn-success">
 
 </form>

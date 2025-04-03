@@ -25,7 +25,7 @@
                             <img src="https://via.placeholder.com/150" alt="Foto Profilo" class="rounded-circle mb-3" width="150">
                             <h5 class="card-title">Nome Utente</h5>
                             <p class="card-text">Professione: Sviluppatore Web</p>
-                            <button class="btn btn-dark">Modifica Profilo</button>
+                            <button class="btn btn-warning">Modifica Profilo</button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                                     <label for="bio" class="form-label">Bio</label>
                                     <textarea class="form-control" id="bio" rows="4" disabled>Appassionato di tecnologia, sviluppo web e design. Sempre alla ricerca di nuove sfide.</textarea>
                                 </div>
-                                <button type="submit" class="btn btn-dark">Salva Modifiche</button>
+                                <button type="submit" class="btn btn-success">Salva Modifiche</button>
                             </form>
                         </div>
                     </div>
