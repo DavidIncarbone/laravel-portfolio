@@ -45,25 +45,34 @@ class TypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Type $type)
     {
-        //
+        return view("types.show", compact("type"));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Type $type)
     {
-        //
+        $types = Type::all();
+
+        return view("types.edit", compact("type", "types"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Type $type)
     {
-        //
+        $data = $request->all();
+
+        $type->name = $data["name"];
+        $type->description = $data["description"];
+
+        $type->update();
+
+        return redirect()->route("types.index");
     }
 
     /**

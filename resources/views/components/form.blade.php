@@ -31,6 +31,7 @@
         <label for="summary">Descrizione del progetto</label>
         <textarea  name="summary" id="summary" width="100%" rows="5">{{$summary}}</textarea>
      </div>
+  
      <div class="form-control mb-3 d-flex flex-column">
         <label for="link">Link al progetto</label>
         <input type="text" name="link" id="link" value="{{$link}}">

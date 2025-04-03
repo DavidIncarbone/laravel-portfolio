@@ -22,12 +22,12 @@
                         <tr>
                             <td>{{$type->name}}</td>
                             @php
-                                 $maxWords = 10; 
+                                 $maxWords = 23; 
                                 $words = explode(' ', $type->description);
                                  $shortenedDescription = implode(' ', array_slice($words, 0, $maxWords)); 
                             @endphp
                             <td>{{$shortenedDescription}}...</td>
-                            <td class="d-flex gap-3">
+                            <td class="d-flex justify-content-center gap-3">
                                 <a id="type-details-btn" href="{{route("types.show", $type)}}" class="btn btn-info">Dettagli</a>
                                 <a class="btn btn-warning" href="{{ route("types.edit", $type) }}">Modifica</a>
                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">

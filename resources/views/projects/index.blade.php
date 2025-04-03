@@ -21,7 +21,7 @@
                     <thead>
                         <tr class="text-center">
                             <th>Nome Progetto</th>
-                            <th>Tipo</th>
+                            <th>Tipologia</th>
                             <th>Nome Cliente</th>
                             <th>Periodo di Realizzazione</th>
                             <th>Descrizione</th>

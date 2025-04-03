@@ -2,21 +2,21 @@
 
 @section("content")
 
+<a href="{{route("types.index")}}" class="btn btn-primary my-3">< Torna alle tipologie</a>
+
 <h1 class="text-center py-5">Aggiungi tipologia</h1>
 
-<form action="{{route("types.store")}}" method="POST">
+<x-miniform>
+<x-slot:method></x-slot>
+<x-slot:action>{{ route( "types.store" ) }}</x-slot>
+<x-slot:actionTodo>aggiungere</x-slot>
+<x-slot:inputName>name</x-slot>
+<x-slot:name></x-slot>
+<x-slot:areaName>description</x-slot>
+<x-slot:description></x-slot>
 
-@csrf
 
-<div class="form-control d-flex flex-column gap-2 pb-3 mb-3">
-<label for="name">Inserisci la tipologia da aggiungere</label>
-<input type="text" name="name" id="name">
-</div>
-<div class="form-control d-flex flex-column gap-2 pb-3 mb-3">
-<label for="description">Inserisci una descrizione</label>
-<textarea type="text" name="description" id="description" rows="5"></textarea>
-</div>
-<input type="submit" value="Aggiungi" class="btn btn-success">
-</form>
+
+</x-miniform>
 
 @endsection

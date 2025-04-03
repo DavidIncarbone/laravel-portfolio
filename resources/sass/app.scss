@@ -103,6 +103,41 @@ form textarea {
     height: 35px;
 }
 
+
+.section-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.section-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #f1f3f5;
+}
+
+.card-body {
+    font-size: 1rem;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* Responsività per schermi più piccoli */
 @media (max-width: 768px) {
     .wrapper {
