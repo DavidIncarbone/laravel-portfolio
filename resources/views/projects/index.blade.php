@@ -31,7 +31,7 @@
                         @foreach($projects as $project)
                         <tr>
                             <td>{{$project->name}}</td>
-                            <td>{{$project->type}}</td>
+                            <td>{{$project->type->name}}</td>
                             <td>{{$project->customer}}</td>
                             <td>{{$project->period}}</td>
                             @php

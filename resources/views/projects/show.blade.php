@@ -27,7 +27,7 @@
                                </button>
                         </div>
                         </div>
-                        <p><strong>Tipo:</strong> {{$project->type}}</p>
+                        <p><strong>Tipo:</strong> {{$project->type->name}}</p>
                         <p><strong>Cliente:</strong> {{$project->customer}}</p>
                         <p><strong>Periodo di Realizzazione:</strong> {{$project->period}}</p>
                         <p><strong>Descrizione:</strong>{{$project->summary}} </p>

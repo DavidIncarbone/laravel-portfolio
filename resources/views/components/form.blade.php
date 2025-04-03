@@ -13,7 +13,10 @@
     </div>
     <div class="form-control mb-3 d-flex flex-column">
         <label for="type">Tipo di progetto</label>
-        <input type="text" name="type" id="type" value="{{$type}}">
+        
+        <select name="type_id" id="type">
+            {{$type}}
+        </select>
     </div>
     <div class="form-control mb-3 d-flex flex-column">
         <label for="customer">Cliente</label>

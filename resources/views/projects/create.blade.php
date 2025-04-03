@@ -4,10 +4,15 @@
 
 <x-form>
     
+    
 <x-slot:route>{{route("projects.store")}}</x-slot>
 <x-slot:method></x-slot>
 <x-slot:name></x-slot>
-<x-slot:type></x-slot>
+<x-slot:type>
+    @foreach($types as $type)
+    <option value="{{$type->id}}" >{{$type->name}}</option>
+    @endforeach
+</x-slot>
 <x-slot:customer></x-slot>
 <x-slot:period></x-slot>
 <x-slot:summary></x-slot>
