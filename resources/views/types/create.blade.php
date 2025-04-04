@@ -16,6 +16,7 @@
 <x-slot:areaName>description</x-slot>
 <x-slot:description></x-slot>
 <x-slot:color></x-slot>
+<x-slot:btnAction>Aggiungi</x-slot>
 
 
 

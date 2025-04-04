@@ -2,30 +2,29 @@
 
 @section("content")
 
-<a href="{{route("technologies.index")}}" class="btn btn-primary my-3">< Torna alle tecnologie</a>
+<div><a href="{{route("technologies.index")}}" class="btn btn-primary my-3">< Torna alle tecnologie</a></div>
+
 
 <h1 class="text-center py-5">Aggiungi tecnologia</h1>
 
-<x-miniform>
-<x-slot:method></x-slot>
-<x-slot:action>{{ route( "technologies.store" ) }}</x-slot>
-<x-slot:subject>tecnologia</x-slot>
-<x-slot:actionTodo>aggiungere</x-slot>
-<x-slot:inputName>name</x-slot>
-<x-slot:name></x-slot>
-<x-slot:areaName>description</x-slot>
-<x-slot:description></x-slot>
-<x-slot:color>
-    <x-slot:color>
-    <div class="form-control d-flex flex-column gap-2 pb-3 mb-3">
-<label for="color">Scegli il colore</label>
-<input type="color" name="color" id="color" value="#">
+<form action="{{route("technologies.store")}}" method="POST">
+
+@csrf
+
+<div class="form-control d-flex flex-column gap-2 pb-3 mb-3">
+<label for="name">Inserisci il nome della tecnologia</label>
+<input type="text" name="name" id="name">
 </div>
-</x-slot>
+<div class="form-control d-flex flex-column gap-2 pb-3 mb-3">
+<label for="description">Inserisci una descrizione</label>
+<textarea type="text" name="description" id="description" rows="5"></textarea>
+</div>
+<div class="form-control d-flex flex-column gap-2 pb-3 mb-3" style="width: 250px">
+<label for="color">Scegli il colore del badge</label>
+<input class="w-75" type="color" name="color" id="color">
+</div>
 
-
-
-
-</x-miniform>
+<input type="submit" value="Aggiungi" class="btn btn-success">
+</form>
 
 @endsection
