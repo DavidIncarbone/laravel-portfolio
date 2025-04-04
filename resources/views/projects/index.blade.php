@@ -11,6 +11,7 @@
             <div class="d-flex gap-3 py-4">
     <a class="btn btn-primary" href="{{ route("projects.create") }}">Aggiungi un nuovo progetto</a>
     <a class="btn btn-warning" href="{{ route("types.index") }}">Gestisci le tipologie</a>
+    <a class="btn btn-warning" href="{{ route("technologies.index") }}">Gestisci le tecnologie</a>
     
          
              </div>

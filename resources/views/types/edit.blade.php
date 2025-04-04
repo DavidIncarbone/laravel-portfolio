@@ -22,7 +22,7 @@
 <textarea type="text" name="description" id="description" rows="5"
  >{{$type->description}}</textarea>
 </div>
-<input type="submit" value="Modifica" class="btn btn-success">
+<input type="submit" value="Salva modifiche" class="btn btn-success">
 </form>
 
 @endsection

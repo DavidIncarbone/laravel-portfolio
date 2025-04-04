@@ -28,6 +28,7 @@
 <x-slot:period></x-slot>
 <x-slot:summary></x-slot>
 <x-slot:link></x-slot>
+<x-slot:btnAction>Aggiungi</x-slot>
 
 </x-form>
 

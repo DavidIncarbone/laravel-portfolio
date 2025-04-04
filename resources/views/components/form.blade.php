@@ -35,6 +35,6 @@
         <input type="text" name="link" id="link" value="{{$link}}">
     </div>
 
-     <input type="submit" value="Salva" class="btn btn-success">
+     <input type="submit" value="{{$btnAction}}" class="btn btn-success">
 
 </form>
