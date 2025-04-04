@@ -25,9 +25,20 @@
                              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                  Elimina
                                </button>
+
+                               
                         </div>
                         </div>
                         <p><strong>Tipo:</strong> {{$project->type->name}}</p>
+                        <p><strong>Tecnologie utilizzate:</strong>
+                        
+                        @foreach ($project->technologies as $technology)
+
+                       <span class="badge" style="background-color: {{$technology->color}}">{{$technology->name}}</span> 
+
+                        @endforeach
+                        
+                        </p>
                         <p><strong>Cliente:</strong> {{$project->customer}}</p>
                         <p><strong>Periodo di Realizzazione:</strong> {{$project->period}}</p>
                         <p><strong>Descrizione:</strong>{{$project->summary}} </p>

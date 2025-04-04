@@ -1,7 +1,4 @@
 
-
-
-
 <form action="{{$route}}" method="POST">
 
     @csrf
@@ -18,6 +15,7 @@
             {{$type}}
         </select>
     </div>
+    {{$technologies}}
     <div class="form-control mb-3 d-flex flex-column">
         <label for="customer">Cliente</label>
         <input type="text" name="customer" id="customer" value="{{$customer}}">

@@ -2,6 +2,7 @@
 
 @section("content")
 
+
 <x-form>
     
     
@@ -12,6 +13,16 @@
     @foreach($types as $type)
     <option value="{{$type->id}}" >{{$type->name}}</option>
     @endforeach
+</x-slot>
+<x-slot:technologies>
+     <div class="form-control mb-3 d-flex flex-wrap">
+        @foreach($technologies as $technology)
+        <div class="tag me-2">
+        <input type="checkbox" name="technologies[]" value="{{$technology->id}}" id="technology-{{$technology->id}}">
+        <label for="technology-{{$technology->id}}">{{$technology->name}}</label>
+        </div>
+        @endforeach
+    </div>
 </x-slot>
 <x-slot:customer></x-slot>
 <x-slot:period></x-slot>
